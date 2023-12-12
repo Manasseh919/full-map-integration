@@ -17,7 +17,7 @@ const AppMapView = () => {
           region={{
             latitude: location?.latitude,
             longitude: location?.longitude,
-            locationDelta: 0.0422,
+            latitudeDelta: 0.0422,
             longitudeDelta: 0.0421,
           }}
         >
