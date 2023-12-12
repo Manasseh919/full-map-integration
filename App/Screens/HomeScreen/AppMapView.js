@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
-import MapView, { PROVIDER_GOOGLE } from "react-native-maps";
-import { StyleSheet, View } from "react-native";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
+import { Image, StyleSheet, View } from "react-native";
 import MapViewStyle from "./../../utils/MapViewStyle.json";
 import { UserLocationContext } from "../../Context/UserLocationCOntext";
 
@@ -17,10 +17,22 @@ const AppMapView = () => {
           region={{
             latitude: location?.latitude,
             longitude: location?.longitude,
-            locationDelta:0.0422,
-            longitudeDelta:0.0421
+            locationDelta: 0.0422,
+            longitudeDelta: 0.0421,
           }}
-        />
+        >
+          <Marker
+            coordinate={{
+              latitude: location?.latitude,
+              longitude: location?.longitude,
+            }}
+          >
+            <Image
+              source={require("./../../../assets/images/eme3.png")}
+              style={{ width: 60, height: 60 }}
+            />
+          </Marker>
+        </MapView>
       </View>
     )
   );
