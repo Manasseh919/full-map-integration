@@ -2,12 +2,14 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import AppMapView from './AppMapView'
 import Header from './Header'
+import SearchBar from './SearchBar'
 
 const HomeScreen = () => {
   return (
     <View>
       <View style={styles.headerContainer}>
         <Header/>
+        <SearchBar/>
       </View>
       <AppMapView/>
     </View>
